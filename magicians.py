@@ -9,13 +9,11 @@ magicians = ['dark magician', 'dark magician girl', 'dark magician of chaos']
 for magician_names in magicians:
     print(f"{magician_names.title()}, that was a great trick!")
     print(f"Now, {magician_names.title()} attack directly!\n")
-    
-
-    
+        
 yugioh_dragons = ['blue eyes white dragon', 'red eyes black dragon', 'blue eyes ultimate dragon']
 for dragon_name in yugioh_dragons:
     print(f"I summon the {dragon_name.title()} in attack position!")
     print(f"{dragon_name.title()}, use your dragon breath and attack directly!\n")
-    
+
 # This print() statement shows end of program.
 print("All the Magicians and Dragons have finished!\n")
