@@ -84,7 +84,6 @@ for drinking_age in elderly_age:
         print(f"Oh my gosh, this age is '{drinking_age}', you have beend drinking for a long time!\n")
     else:
         print(f"I don't know where to sort this age: '{drinking_age}'.\n")
-        
 for drinking_age in children_age:
     if drinking_age < 21:
         print(f"This age: '{drinking_age}' is not old enough to buy alcohol.\n")
@@ -94,3 +93,52 @@ for drinking_age in children_age:
         print(f"Oh my gosh, this age is '{drinking_age}', you have beend drinking for a long time!\n")
     else:
         print(f"I don't know where to sort this age: '{drinking_age}'.\n")
+
+# Create an If Else If Statement for following:
+    # Admissions - anyone under age 4 is free
+    # Admissions - anyone between the age 4 to age 18 is $25
+    # Admissions - anyone over the age 18 is $40
+            
+print("This section of the program will be focused on 'If Else If Statements'.\n")
+
+age = 19
+
+if age < 4:
+    print(f"Your age is '{age}' and your admissions is free.\n")
+elif (age >= 4) and (age <= 18):
+    print(f"Your age is '{age}' and your admissions is $25.\n")
+elif (age >= 19):
+    print(f"Your age is '{age}' and your admissions is $40.\n")
+    
+# This verision of code is much easier to modify due to simplicity.
+    # 1 print() statement to edit vs. 3 print() statements
+
+if age < 4:
+    price = 0
+elif (age >= 4) and (age <= 18):
+    price = 25
+elif (age >= 19):
+    price = 40
+    
+print(f"Your age is '{age}' and your admissions is '${price}'.\n")
+
+# Lets test speficific conditions with a pizza example:
+
+request_pizza_toppings = ['mushrooms', 'anchovies', 'sausage', 'extra cheese', 'extra pepperoni']
+
+if 'mushrooms' in request_pizza_toppings:
+    print('Mushrooms has been added!\n')
+    
+if 'anchovies' in request_pizza_toppings:
+    print('Anchovies has been added\n')
+    
+if 'sausage' in request_pizza_toppings:
+    print('Sausage has been added!\n')
+    
+if 'extra cheese' in request_pizza_toppings:
+    print('Extra Cheese has been added!\n')
+    
+if 'extra pepperoni' in request_pizza_toppings:
+    print('Extra Pepperoni has been added!\n')
+
+print('We have received your toppings! We are now making your pizza!\n')
