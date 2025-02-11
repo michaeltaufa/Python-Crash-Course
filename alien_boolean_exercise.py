@@ -85,4 +85,3 @@ if 'strawberry' in favorite_fruits:
     print("Strawberry was found in your list of fruits.\n")
     
 print("This is the end of the 'Favorite Fruit' program section.\n")
-

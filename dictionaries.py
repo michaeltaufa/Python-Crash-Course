@@ -23,3 +23,35 @@ print(alien_2['color'])
 print(alien_2['points'])
 
 print(f"\n\nI am going to access the dictionary: alien_2, where the points is {alien_2['points']} .\n")
+
+# Adding 'New Values' for dictionary
+    # When adding new values ....
+    # Call dictionary followed by key-value pairs
+
+print("This is the Dictionary alien_2 before:")
+print(alien_2)
+
+alien_2['x_position'] = 0
+alien_2['y_position'] = 25
+
+print("This is the Dictionary alien_2 after:")
+print(alien_2)
+
+# Starting out with an 'Empty Dictionary'
+
+alien_special = {}
+
+alien_special['color'] = 'rainbow'
+alien_special['points'] = 100
+
+print(f"\nLet's see if we can print this new dictionary called alien_special: {alien_special}.\n")
+
+# Modifying values in Dictionaries
+
+print(f"The color of the 'alien_special' is {alien_special['color']}.\n")
+
+alien_special['color'] = 'neon rainbow'
+
+print(f"The NEW color of the 'alien_special' is {alien_special['color']}.\n")
+
+alien_special['color'] = 'rainbow'
