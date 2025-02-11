@@ -55,3 +55,44 @@ alien_special['color'] = 'neon rainbow'
 print(f"The NEW color of the 'alien_special' is {alien_special['color']}.\n")
 
 alien_special['color'] = 'rainbow'
+
+# Modifying Values (Continues)
+    # Let's  adjust 'alien_special' x poition to move to the right
+    # First, build an 'if statement'
+        # NOTE:
+            # When modifying dictionaries, you can create 'if statements' to modify values.
+
+alien_special['x_position'] = 0
+alien_special['y_position'] = 25
+alien_special['speed'] = 'slow'
+
+print(f"Before Modifying x_position: {alien_special['x_position']}.\n")
+
+if alien_special['speed'] == 'slow':
+    x_increment = 1 
+elif alien_special['speed'] == 'medium':
+    x_increment = 2
+elif alien_special['speed'] == 'fast':
+    x_increment = 3
+
+alien_special['x_position'] = alien_special['x_position'] + x_increment
+
+print(f"After Modifying x_position: {alien_special['x_position']}.\n")
+
+# Deleting key-value pairs in Dictionaries will require the 'del statement'
+print(f"Before 'del statement': {alien_special}.\n")
+
+del alien_special
+
+# print(alien_special) # Output: alien_special is not defined
+
+# Adding 'Same Objects' in Dictionaries:
+
+favorite_languages ={
+        'michael': 'python',
+        'jen': 'javascript',
+        'scott': 'C',
+        'john': 'C++',
+        'katie': 'python'
+        }
+print(f"Michael's favorite programming language is {favorite_languages['michael'].title()}.\n")
