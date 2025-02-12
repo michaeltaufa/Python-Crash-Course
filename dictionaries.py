@@ -79,13 +79,6 @@ alien_special['x_position'] = alien_special['x_position'] + x_increment
 
 print(f"After Modifying x_position: {alien_special['x_position']}.\n")
 
-# Deleting key-value pairs in Dictionaries will require the 'del statement'
-print(f"Before 'del statement': {alien_special}.\n")
-
-del alien_special
-
-# print(alien_special) # Output: alien_special is not defined
-
 # Adding 'Same Objects' in Dictionaries:
 
 favorite_languages ={
@@ -95,4 +88,5 @@ favorite_languages ={
         'john': 'C++',
         'katie': 'python'
         }
+
 print(f"Michael's favorite programming language is {favorite_languages['michael'].title()}.\n")
