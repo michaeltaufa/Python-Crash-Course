@@ -43,3 +43,47 @@ souls_monster['x_position'] = souls_monster['x_position'] + x_increment
 
 print(f"\nWatch out! The monster's color is {souls_monster['color'].title()}!")
 print(f"Souls Monster's new position is {souls_monster['x_position']}.\n")
+
+
+# Lets build a dictionary with similar objects.
+    # BONUS: We are going to attempt to conduct a poll system.
+
+favorite_programming_languages = {
+        'michael': 'python',
+        'jen': 'javascript',
+        'alex': 'C',
+        'john': 'C++',
+        'tom': 'C++',
+        'sam': 'javascript',
+        'khan': 'javascript',
+        'edward': 'C',
+        'sarah': 'javascript',
+        'kim': 'python',
+        'phil': 'java',
+        'mike': 'java',
+        }
+
+# for key, value in favorite_programming_languages:
+#   point_python = 0
+#   point_javascript = 0
+#  point_C = 0
+# point_CC = 0
+#    point_java = 0
+#  if value == 'python':
+#     point_python = 1
+#   elif value == 'javascript':
+#      point_javascript = 1
+# elif value == 'C':
+#    point_C = 1
+#  elif value == 'C++':
+#     point_CC = 1
+# elif value == 'java':
+#     point_java = 1
+
+tom_langauge = favorite_programming_languages['tom'].title()
+print(f"Tom's favorite programming language is {tom_langauge}.\n")
+
+sarah_language = favorite_programming_languages['sarah'].title()
+print(f"Sara's favorite programming language is {sarah_language}.\n")
+
+
