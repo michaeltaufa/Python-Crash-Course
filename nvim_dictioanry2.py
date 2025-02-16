@@ -63,22 +63,6 @@ favorite_programming_languages = {
         'mike': 'java',
         }
 
-# for key, value in favorite_programming_languages:
-#   point_python = 0
-#   point_javascript = 0
-#  point_C = 0
-# point_CC = 0
-#    point_java = 0
-#  if value == 'python':
-#     point_python = 1
-#   elif value == 'javascript':
-#      point_javascript = 1
-# elif value == 'C':
-#    point_C = 1
-#  elif value == 'C++':
-#     point_CC = 1
-# elif value == 'java':
-#     point_java = 1
 
 tom_langauge = favorite_programming_languages['tom'].title()
 print(f"Tom's favorite programming language is {tom_langauge}.\n")
@@ -86,4 +70,37 @@ print(f"Tom's favorite programming language is {tom_langauge}.\n")
 sarah_language = favorite_programming_languages['sarah'].title()
 print(f"Sara's favorite programming language is {sarah_language}.\n")
 
+print("\nThis is the start for 'loop' through a dictionary.\n")
+print(favorite_programming_languages)
 
+# For this section, let's focus on looping dictionaries.
+    # When creating a 'for loop', you will need to have (2) variables to acces 'key' and 'value'
+    # Let's first focus on creating a 'for loop' for a previous dictionary that was declared.
+    # For this example, we will use the method 'items()'
+
+print("\nHere is the output for looping through a dictionary:\n")
+for name, language in favorite_programming_languages.items():
+    print(f"Hello, my name is {name.title()} and my favorite programming language is {language.title()}.")
+
+# Next, we will focus on using the method 'key()' to focus on grabbing the values ONLY for the key:
+    # Using (1) variavble in a 'for loop' will be the default to grabbing 'keys' value.
+
+print("\nHere is the output for looping through a dictionary for 'keys':\n")
+
+for name in favorite_programming_languages.keys():
+    print(f"The following is the value for 'key': {name.title()}.")
+
+# For this next example, we will compare a Dictionary with a List:
+    # Remember the fundamentals, declare main variable used for both dictionary and list.
+
+
+print("\nHere is the output for looping through a dictionary while comparing to a list.\n")
+
+best_friends = ['mike', 'khan']
+for name in favorite_programming_languages.keys():
+    print(f"Hello {name.title()}!")
+
+    if name in best_friends:
+        # When grabbing a 'key value', redeclare dictionary with same variable used in 'for loop'
+        language = favorite_programming_languages[name].title()
+        print(f"One of my best friends is {name.title()}! Are you still programming in {language}?")
