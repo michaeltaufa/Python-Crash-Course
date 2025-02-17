@@ -63,7 +63,6 @@ favorite_programming_languages = {
         'mike': 'java',
         }
 
-
 tom_langauge = favorite_programming_languages['tom'].title()
 print(f"Tom's favorite programming language is {tom_langauge}.\n")
 
@@ -104,3 +103,43 @@ for name in favorite_programming_languages.keys():
         # When grabbing a 'key value', redeclare dictionary with same variable used in 'for loop'
         language = favorite_programming_languages[name].title()
         print(f"One of my best friends is {name.title()}! Are you still programming in {language}?")
+
+# For this next section, I'm going to focus on looping through a dictionary key's in order.
+    # Let's test to see the 'sorted()' function executed.
+
+print("\nThis section of the program is focused on sorted 'keys' in a dictionary.\n")
+
+favorite_souls_games = {
+        'michael': 'elden ring',
+        'jacob': 'bloodborne',
+        'sarah': 'bloodborne',
+        'tom': 'dark souls',
+        'caitlyn': 'dark souls 2',
+        }
+
+# IMPORTANT: For functions such as sorted(), you can insert dictionary + method.
+
+for name, game in sorted(favorite_souls_games.items()):
+    print(f"{name.title()} : {game.title()}")
+
+# For this section, we will focus on accessing the 'Values' in a dictioanry:
+
+print("\nFor this next section, I will focus on accessing 'Values'.\n")
+
+for game in favorite_souls_games.values():
+    print(f"{game.title()}")
+
+print("Now, let's practice sorting 'Values' from a dictionary.\n")
+
+print("Let's print out all the Fromsoftware Games:\n")
+for game in sorted(favorite_souls_games.values()):
+    print(f"{game.title()}.")
+
+# Now let's try using the 'set()' function to prevent duplicates:
+    # Use the dictionary: favorite_programming_languages
+
+print(f"\nFor this section, we are prevent duplicates using 'set()\n")
+
+for language in sorted(set(favorite_programming_languages.values())):
+    print(f"{language.title()}")
+
