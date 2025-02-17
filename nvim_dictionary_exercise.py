@@ -46,4 +46,39 @@ print(f"Integer:\n{programming_glossary['integer']}\n")
 print(f"For Loop:\n{programming_glossary['for loop']}\n")
 print(f"String:\n{programming_glossary['string']}\n")
 
-print("This is the end of the 'Dictionary Exercises' Program.\n")
+# For this next section of the program, we will focus on building more programs through the Exercises provided.
+
+# 6-4: Glossary 2:
+    # Create a to print put all the dictionary terms from '6-3 Glosssary' at line 16.
+
+programming_glossary['dictionary'] = 'A collection of information paired through key-values.'
+programming_glossary['f string'] = 'A way to concatenate strings with variables.'
+programming_glossary['math operations'] = 'Math operations to execute logic through PEMDAS.'
+programming_glossary['print function'] = 'A function to print out text.'
+programming_glossary['sorted()'] = 'A python built in function to sort out strings in order.'
+
+print("This next section is focused on Exercise: 6-4.\n")
+
+for term, description in sorted(programming_glossary.items()):
+    print(f"{term.title()}: {description}.")
+
+# 6-5 Rivers:
+    # Make a dictionaty containing three major rivers and the count related to the river.
+
+print("\nThis next section is focused on Exercise 6-5:\n")
+
+river_dictionary = {
+        'mississippi': 'united states of america',
+        'nile': 'egypt',
+        'amazon': 'columbia',
+        }
+
+for river, country in river_dictionary.items():
+    print(f"The '{river.title()}' river runs through the country: {country.title()}.")
+
+for river in river_dictionary.keys():
+    print(f"This is the output of keys: {river.title()}.")
+
+for country in river_dictionary.values():
+    print(f"This is the output of values: {country.title()}.")
+
