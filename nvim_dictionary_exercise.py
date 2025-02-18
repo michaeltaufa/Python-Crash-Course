@@ -82,3 +82,25 @@ for river in river_dictionary.keys():
 for country in river_dictionary.values():
     print(f"This is the output of values: {country.title()}.")
 
+# 6-6: Polling:
+   # Create a list of people WHO should take a 'favorite language poll'
+   # Create a seperate list of people who are 'in the list' and 'not in the list'
+
+print("\nThis next section is focused on Exercise 6-6:\n")
+
+favorite_programmingLanguages = {
+        'michael': 'python',
+        'sara': 'javascript',
+        'kim': 'C++',
+        'sam': 'python',
+        'aaron': 'java',
+        }
+
+language_poll_roser = ['michael', 'alex', 'tom', 'kim', 'sam', 'keith', 'aaron']
+
+for name in language_poll_roser:
+    if name in favorite_programmingLanguages:
+        language = favorite_programmingLanguages[name]
+        print(f"{name.title()}, thank you for your participation. You answer was language: {language.title()}.")
+    else:
+        print(f"{name.title()}, you did not take the poll. You are invited to take the poll.")
