@@ -143,3 +143,37 @@ print(f"\nFor this section, we are prevent duplicates using 'set()\n")
 for language in sorted(set(favorite_programming_languages.values())):
     print(f"{language.title()}")
 
+# Nesting:
+    # For this section, we will focus on nesting dictionaries, list, and etc.
+    # First, we will create a list and nest a dictionary.
+
+print("\nFor this section, we will focus on nesting dictionaries in a list:\n")
+
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2]
+
+for alien in aliens:
+    print(alien)
+
+print("\nFor this next section, we will experiment appending a list with a dictionary:\n")
+
+# Create an empty list:
+bears = []
+
+# Make 10 bears:
+    # Use the range() function:
+
+for new_bears in range(10):
+    new_bears = {'color': 'brown', 'points': 5}
+    bears.append(new_bears)
+
+# Check work:
+    # Print all elements in the list and print the length of the list.
+
+for bear in bears:
+    print(bear)
+
+print(f"\nThe length of the list is {len(bears)}.\n")
