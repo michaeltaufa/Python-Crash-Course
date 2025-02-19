@@ -149,9 +149,9 @@ for language in sorted(set(favorite_programming_languages.values())):
 
 print("\nFor this section, we will focus on nesting dictionaries in a list:\n")
 
-alien_0 = {'color': 'green', 'points': 5}
-alien_1 = {'color': 'yellow', 'points': 10}
-alien_2 = {'color': 'red', 'points': 15}
+alien_0 = {'color': 'green', 'points': 5, 'speed': 'slow'}
+alien_1 = {'color': 'yellow', 'points': 10, 'speed': 'medium'}
+alien_2 = {'color': 'red', 'points': 15, 'speed': 'fast'}
 
 aliens = [alien_0, alien_1, alien_2]
 
@@ -167,13 +167,49 @@ bears = []
     # Use the range() function:
 
 for new_bears in range(10):
-    new_bears = {'color': 'brown', 'points': 5}
+    new_bears = {'color': 'brown', 'points': 5, 'speed': 'slow'}
     bears.append(new_bears)
 
 # Check work:
     # Print all elements in the list and print the length of the list.
 
+for yellow_bear in bears[0:3]:
+    if yellow_bear['color'] == 'brown':
+        yellow_bear['color'] = 'yellow'
+        yellow_bear['points'] = 10
+        yellow_bear['speed'] = 'medium'
+    elif yellow_bear['color'] == 'yellow':
+        yellow_bear['color'] = 'red'
+        yellow_bear['points'] = 15
+        yellow_bear['speed'] = 'fast'
+
 for bear in bears:
     print(bear)
 
 print(f"\nThe length of the list is {len(bears)}.\n")
+
+print("\nFor the next section, we will focus on building a list in a dictionary.\n")
+
+pizza = {
+        'crust': 'thick',
+        'toppings': ['mushrooms', 'extra cheese']
+        }
+
+print(f"You ordered a '{pizza['crust'].title()}' crust pizza with the following toppings:")
+for topping in pizza['toppings']:
+    print(topping.title())
+
+favorite_video_games = {
+        'michael': ['dark souls remastered', 'elden ring', 'orcarina of time'],
+        'jen': ['orcarina of time'],
+        'kim': ['call of duty'],
+        'john': ['dark souls remastered', 'elden ring']
+        }
+# IMPORTANT: When printing lists within dictionary with 'title()' function:
+    # Use (2) variables to access 'Values' and then 'Lists'
+
+for name, games in favorite_video_games.items():
+    print(f"{name.title()} favorite games is the following:")
+    for game in games:
+        print(f"\t{game.title()}")
+
