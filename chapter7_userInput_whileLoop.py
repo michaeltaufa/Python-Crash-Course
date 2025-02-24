@@ -9,34 +9,36 @@
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-name = input("Hello! Please enter your name: ")
+name = input("\nWelcome to the 'chapter7_userInput()' program. Please enter your name: ")
 
-age = input(f"\nHello {name.title()}, how old are you? ")
+user_age = input(f"\nHello {name.title()}! Let's collect some information. Please enter your age: ")
 
-answer = input(f"\nTo confirm, {name.title()} are you {int(age)}? ")
+user_sportsTeam = input(f"\nWow I didn't know you are {user_age} years old! One last question.\nWhat is your favorite NFL sports team? ")
 
-print(f"\nThank you for confirming {name.title()} that you said '{answer.title()}' and that you are {int(age)} years old!")
+user_information_input = []
 
-michael_answers = []
-michael_answers.append(name)
-michael_answers.append(age)
-michael_answers.append(answer)
+user_information_input.append(name)
+user_information_input.append(user_age)
+user_information_input.append(user_sportsTeam.title())
 
-age_answer = input(f"\nHello, let's test to see if you are old enough to drink. How old are you? >> ")
-michael_answers.append(age_answer)
+print(f"\nAlright {name.title()}, lets quickly print out all this information you shared:")
 
-if int(age_answer) >= 21:
-    print(f"\nCongratulations! You are {age_answer} years old. You are legal to drink alcohol.")
-else:
-    print(f"\nI am sorry, but you are not old enough to drink alcohol.")
+for user_info in user_information_input:
+    print(user_info)
 
-decision_answer = input(f"\nNow, press 's' and press 'enter' to print all your anwers below. >> ")
+user_answer_key = input(f"\n{name.title()}, if the information you submitted is correct, please press 'x' to contunue.  ")
+user_decision = True 
 
-if decision_answer == 's':
-    for user_answer in michael_answers:
-        print(user_answer)
-else:
-    print("I am sorry, the input is 'incorrect'.")
+while user_decision == True:
+    if user_answer_key == 'x': 
+        user_decision = False
+        print(f"\nSuccessful!")
+        print(f"{name.title()}, you did it! Go '{user_sportsTeam.title()}'! Program is complete!")
+        break
+    else:
+        print("\nThis is an invalid entry. Please press 'x' to continue:  ")
 
-print("\nThis is the end of the program. Thank you! :)")
+    user_answer_key = input(f"Let's try again. Press 'x' to continue:   ")
 
+
+print(f"Congratulations! Program is complete!\n")
