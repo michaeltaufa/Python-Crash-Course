@@ -1,8 +1,5 @@
-# For this program, we will practice running examples from Chapter 7.
-
-
-
-
+# This program has been created by Michael Taufa.
+    # For this program, we will practice running examples from Chapter 7.
 
 # input () functions:
     # When creating an input, you can assign to a variable.
