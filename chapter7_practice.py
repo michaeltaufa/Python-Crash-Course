@@ -22,8 +22,7 @@ prompt_gameStart = "\n\nWelcome to the TEXT GAME! To start enter your name: "
 userName_game = input(prompt_gameStart)
 
 print(f"\nWelcome {userName_game.title()}! Thank you entering your name.")
-
-
+    
 
 
 
@@ -43,4 +42,20 @@ else:
     print(f"\nI am sorry {userName_game.title()}. You are not old enought to buy alcohol.")
 
 
+# Modulo Operator:
+   # The modulo operator, '%' is used to divide numbers and show the remainder
+
+testing_numbers = 2 % 2
+print(testing_numbers)
+
+# PRACTICE SECTION: modulo operator (even or odd)
+
+
+user_numberInput = input("\nEnter a number to check if it is 'Even' or 'Odd': ")
+user_numberInput = int(user_numberInput)
+
+if user_numberInput % 2 == 0:
+    print(f"\nGood news! {user_numberInput} is an 'Even' number!")
+else:
+    print(f"\nBetter news! {user_numberInput} is an 'Odd' number!")
 
