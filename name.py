@@ -28,3 +28,9 @@ program_language2 = "C"
 program_language3 = "Python"
 
 print(f"\nHere is the list of programming languages I have learned:\n\t{program_language1}\n\t{program_language2}\n\t{program_language3}\n")
+
+
+user_prompt = input(" ")
+
+if user_prompt != " ":
+    print(user_prompt)
