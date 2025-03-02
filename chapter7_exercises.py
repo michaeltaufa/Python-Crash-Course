@@ -86,9 +86,9 @@ while movie_programStatus:
         # input() is NOT taking string input
         # input() is skipped to else statement and getting error
 
-    elif user_movieAge != int: 
-        print("\nInvalid Input.")
-        continue
+    # elif user_movieAge != int: 
+        # print("\nInvalid Input.")
+        # continue
 
 
     else:
@@ -107,7 +107,35 @@ while movie_programStatus:
 
 print("\nThis is the end of the Section 7-5: Movie Ticket.")
 
+# Section 7-5: Three Exits
+    # Exercise is completed due to adding the following:
+    # Conditional Test, active variable, and break statement
+
+
+# Section 7-6: Inifinty
+    # Create a loop that never ends.
+
+program_inifiniteActive = True
+
+while program_inifiniteActive:
+
+    user_infinity = input("\nWelcome to the last section of the program: Inifinty. Press 'x' print infinite statements.\n'CRT-C' will close the window:  ")
+
+    if user_infinity == 'x':
+
+        program_infinityStatus = True
+
+        infinite_number = 0
+
+        while program_infinityStatus:
+
+            print(infinite_number)
+
+            infinite_number = infinite_number + 1
+
+    else:
+        print("\nIncorrect Input. Please try again.")
 
 
 
-
+# Program exercises are complete.
