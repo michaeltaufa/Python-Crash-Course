@@ -37,6 +37,77 @@ else:
     print(f"\n{user_numberPrompt} is NOT a multiple of 10.")
 
 
+# Section 7-4: Pizza Toppings
+    # Write a loop that prompts the user to enter series of pizza Toppings
+    # Print out all pizza Toppings
+    # Add a 'quit' prompt to exit while loop
+
+
+user_pizzaToppingsPrompt = "\nType and enter a pizza topping."
+user_pizzaToppingsPrompt += "\nIf you are done, enter 'quit' when you are finished: "
+
+pizza_programStatus = True
+
+while pizza_programStatus:
+
+    pizzaPrompt = input(user_pizzaToppingsPrompt)
+
+    if pizzaPrompt == 'quit':
+        break
+    else:
+        print(f"{pizzaPrompt.title()} has been added.")
+
+print("\nThis is the end of the Section 7-4: Pizza Toppings.")
+
+
+# Section 7-5: Movie Ticket
+    # Create a 'while loop' and ask user's age.
+        # Create prompt of price of movie ticket based on age
+
+        # Age < 3: Ticket is free
+        # Age > 3 and Age < 12: Ticket is $10
+        # Age > 12: Ticket is $15
+
+user_movieTicketPrice = "\nWelcome to the Cinemax4K! To exit, type 'quit'."
+user_movieTicketPrice += "\nEnter your age to reveal the price of your ticket: "
+
+movie_programStatus = True
+
+while movie_programStatus:
+
+    user_movieAge = input(user_movieTicketPrice)
+
+
+
+    if user_movieAge == 'quit':
+        break
+
+    # Comparison:
+        # input() is NOT taking string input
+        # input() is skipped to else statement and getting error
+
+    elif user_movieAge != int: 
+        print("\nInvalid Input.")
+        continue
+
+
+    else:
+        user_movieAge = int(user_movieAge)
+
+
+
+    if int(user_movieAge) <= 3:
+        print("\nCongratulations! Your ticket will be free.")
+
+    elif (int(user_movieAge) >= 4) and (int(user_movieAge) <= 12):
+        print("\nYour ticket price will be $12.00")
+
+    elif (int(user_movieAge) >= 13):
+        print("\nYour ticket price will be $15.00")
+
+print("\nThis is the end of the Section 7-5: Movie Ticket.")
+
+
 
 
 

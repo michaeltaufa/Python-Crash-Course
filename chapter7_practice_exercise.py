@@ -79,10 +79,16 @@ print("\nThe section 'continue' has started.")
 
 current_number = 0
 
-while current_number < 0:
+while current_number <= 10:
     current_number = current_number + 1
 
     if current_number % 2 == 0:
+        continue
+
+    # Testing to see if we can print '12'
+        # UPDATE: Does not print '12' due to while statement
+
+    elif current_number == 11:
         continue
 
     print(current_number)
