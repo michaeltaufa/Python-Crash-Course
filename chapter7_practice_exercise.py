@@ -73,6 +73,24 @@ while program_statusActive:
         print(message)
 
 
+# SECTION - 'continue' loop
+    # Use a 'continue' loop to return to the beginning of the loop
+print("\nThe section 'continue' has started.")
+
+current_number = 0
+
+while current_number < 0:
+    current_number = current_number + 1
+
+    if current_number % 2 == 0:
+        continue
+
+    print(current_number)
+
+
+
+
+
 
 
 print("\nThe program has ended.")
