@@ -48,5 +48,31 @@ while program_statusActive:
     print("\nThis line of code is in the 'while loop'.")
 
 
+# SECTION - Using 'break' to exit:
+    # 'break' can be used to used to direct the flow of a program
+    # ALSO, it can be used to control which lines of code can be executed.
+
+    # Lastly, 'break' can be used on 'for loops'
+
+
+program_statusActive = True
+
+print("\nThis is the start of the 2nd 'while' loop.")
+
+while program_statusActive:
+
+    message = input(prompt)
+
+    if message == 'quit':
+        print("This program 'break' out of while loop.")
+        break
+    elif message == '903':
+        print("Secret code number: 903 has been typed. This program will 'break' out of the while loop")
+        break
+    else:
+        print(message)
+
+
+
 
 print("\nThe program has ended.")
