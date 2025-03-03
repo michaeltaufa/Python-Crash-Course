@@ -63,3 +63,42 @@ while (56 in number_lists):
 print(f"\nAfter: {number_lists}")
 
 
+print("\nThis section of the program will be focused on practicing utilizing 'while loops' & lists + dictionaries.")
+
+
+# Build a program that transfers pizza orders that are 'unconfirmed' to 'confirmed' using a while loop
+   # Create (2) lists
+   # Create a variable that will be used to hold the value
+   # REMEMBER:
+        # The difference between remove() and pop()
+        # How to use the append()
+        # Question: Can you use push()? Does it exist in Python?
+        # print() output
+
+pizzaOrders_unconfirmed = ['jen', 'benjamin', 'samuel', 'john']
+pizzaOrders_confirmed = []
+
+    # Flag is not needed for while loop. List with values = True, Lists no values = False
+
+# program_pizzaStatus = True
+
+print("\nPizza Unconfirmed Orders:")
+print(pizzaOrders_unconfirmed)
+
+print("\nPizza Confirmed Orders:")
+print(pizzaOrders_confirmed)
+
+
+while pizzaOrders_unconfirmed:
+        pizzaOrders_transfer = pizzaOrders_unconfirmed.pop()
+
+        print(f"{pizzaOrders_transfer.title()} has been transfered.")
+
+        pizzaOrders_confirmed.append(pizzaOrders_transfer)
+
+
+print("\nPizza orders has been transfered successfully:")
+print(pizzaOrders_confirmed)
+
+print("\nUnconfirmed Pizza Orders:")
+print(pizzaOrders_unconfirmed)
