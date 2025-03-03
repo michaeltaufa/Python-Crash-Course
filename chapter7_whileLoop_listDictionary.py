@@ -41,9 +41,6 @@ for confirmed_user in confirmed_users:
 print(f"\nThis is the 'unconfirmed_users': {unconfirmed_users}")
 print(f"This is the 'confirmed_users': {confirmed_users}\n")
 
-
-
-
 # SECTION - Removing 'specific values' in a list with a 'while loop'
     # Using 'while loops' can scan a list and remove a value UNTIL False
 
