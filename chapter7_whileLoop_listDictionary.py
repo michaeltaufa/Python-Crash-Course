@@ -102,3 +102,36 @@ print(pizzaOrders_confirmed)
 
 print("\nUnconfirmed Pizza Orders:")
 print(pizzaOrders_unconfirmed)
+
+
+
+# SECTION - Filling a dictionary with User Input
+    # 1. Create a user input that would correlate with each other. Key:Values
+    # 2. Create a variable that would organize values based on dictioanry format
+
+    # Create a poll for video games
+
+favorite_videoGames = {}
+
+poll_videoGames = True
+
+
+while poll_videoGames:
+    name = input("\nEnter your name: ")
+    video_game = input("\nEnter your favorite video game: ")
+
+
+    # Study how does the format of user input is stored in dictionaries
+    favorite_videoGames[name] = video_game
+
+    endPoll_program = input("\nIf you want to end the poll, press 'y' or 'Y': ")
+
+    if (endPoll_program == 'y') or (endPoll_program == 'Y'):
+        poll_videoGames = False
+
+
+print("\nCongratulations! The poll is completed. Below is the results: \n")
+
+for name, game in favorite_videoGames.items():
+    print(f"{name.title()}'s favorite video game is {game.title()}.")
+
