@@ -149,5 +149,3 @@ print(f"Here is the content creator dictionary: {contentCreator}")
 
 athlete = build_person('marshawn', 'lynch', age = 38)
 print(f"Here is the athlete dictionary: {athlete}")
-
-
