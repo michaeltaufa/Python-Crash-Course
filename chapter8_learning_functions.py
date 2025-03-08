@@ -3,7 +3,6 @@
 
 # SECTION - Defining a Function:
 
-
 # Below is defining a function:
     # 'def' will create Function
         # 'greet_user' will be the name to create functions
@@ -73,6 +72,7 @@ while pet_programStatus:
     if repeatProgram == 'n':
         pet_programStatus = False
 
+
 # SECTION - Arguments (Keyword Arguments)
     # Keyword: 'Keyword' 
         # Regardless of order of arguments passed in functions
@@ -85,18 +85,69 @@ describe_pet(animal_type = 'cat', pet_name = 'tom')
 describe_pet(pet_name = 'lookiez', animal_type = 'owl')
 
 
-# SECTION - 
+# SECTION - Return Values
+    # 'return' values are assist with large of the grunt work
+
+    #SUB SECTION - 'Optional' Arguments 
+        # Functions can be more versatile through integrating optional arguments
+
+def full_name_format (first_name, last_name, middle_name = ''):
+    first_name = str(first_name)
+    last_name = str(last_name)
+    middle_name = str(middle_name)
+
+    if middle_name == '':
+        full_name = f"\nYou full name is {first_name.title()} {last_name.title()}."
+
+    else:
+        full_name = f"\nYou full name is {first_name.title()} {middle_name.title()} {last_name.title()}."
+
+    return full_name
+
+user_fullName_program = True
+
+while user_fullName_program:
+    user_firstName = input("\nWhat is your first name: ")
+    user_lastName = input(f"{user_firstName.title()}, what is your last name: ")
+
+    user_middle_verification = input(f"{user_firstName.title()}, do you have a middle name? Enter the following (Yes 'y' or No 'n'): ")
+
+    if user_middle_verification == 'y':
+        user_middleName = input("Please enter your middle name: ")
+
+    elif user_middle_verification == 'n':
+        user_middleName = ''
+
+    user_fullName_input = full_name_format(user_firstName, user_lastName, user_middleName)
+    user_fullName_program = False
+
+print(user_fullName_input)
 
 
+# SECTION - Returning a 'Dictionay'
+    # function() can 'return' any kind of value, including complicated.. 
+    # data structures: lists and dictionaries
 
+def build_person (first_name, last_name, age = None):
+    person = {'first': first_name, 'last': last_name}
 
+    # 
+    if age:
+        person['age'] = age
+    else:
+        person['age'] = None
 
+    return person
 
+# The following below is to test if function would 'add more values to dictionary', but did not.
 
+musician = build_person('jimi', 'hendrix', age = 50)
+print(f"Here is the musician dictionary: {musician}")
 
+contentCreator = build_person('prime', 'time')
+print(f"Here is the content creator dictionary: {contentCreator}")
 
-
-
-
+athlete = build_person('marshawn', 'lynch', age = 38)
+print(f"Here is the athlete dictionary: {athlete}")
 
 

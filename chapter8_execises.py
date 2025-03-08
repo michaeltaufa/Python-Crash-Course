@@ -107,11 +107,3 @@ describe_cities('dallas')
 
 
 
-
-
-
-
-
-
-
-
