@@ -54,5 +54,21 @@ validate_VideoGame_orders(completed_VideoGames_orders)
 
 
 
+# SECTION -  Passing Arbitary Number of Arguments
+    # There will be instances when you won't know 
+    # how many arguments will be passed into a function
+    # When calling a function, use *argument as a parameter
+
+print("\nThis section of the program is 'Passing Arbitary Number of Arguments': ")
+
+def make_pizza(*toppings): 
+
+#NOTE: *toppings will create a tuple, whether it has 1 value or 10 values
+    print("\nNow adding the following pizza toppings: ")
+    for topping in toppings:
+        print(f"- {topping.title()}")
+
+make_pizza('green peppers')
+make_pizza('pepperoni', 'extra cheese', 'mushrooms')
 
 

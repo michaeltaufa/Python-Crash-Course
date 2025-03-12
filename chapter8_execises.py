@@ -115,28 +115,51 @@ def show_message(list_messages):
 
 show_message(text_messages)
 
-
-
 # SECTION - 8-10: Sending Messages 
-    #
+    # Write a function called send_message that prints each message and
+    # Moves each message into a new list
+    # Lastly, print both list to show
+
+print("\nThis section of the program is Chapter 8-10 Sending Messages:")
+
+text_messages = ['hello world!', 'i like coding in python :)', 'routines are great exercise']
+sent_messages = []
+
+def transfer_messages(text_messages, sent_messages):
+
+    while text_messages:
+        message_transferred = text_messages.pop()
+        print(f"The message: '{message_transferred.title()}' has been transferred.")
+        sent_messages.append(message_transferred)
+
+"""
+Commented the following calls below due to Exercise 8-11 
+needing access to original list that has been altered in 
+Exercise 8-10
+"""
+
+# transfer_messages(text_messages, sent_messages)
+
+# print("\nMessage transfers are completed.")
+# print(text_messages)
+# print(sent_messages)
 
 
+# SECTION - 8-11: Archieved Messages 
+    # Call the function, transfer_messages() with a "COPY" of a list
+    # print() both lists to show it has both lists and contents
 
+print("\nThis section of the program is Chapter 8-11 Archieved Messages:")
 
+transfer_messages(text_messages[:], sent_messages)
 
+print("\nCopy of messages transfers are completed. Here are the original lists: ")
 
+# NOTE: When both lists are printed, you'll see order is reversed due to .pop() and .append()
+# BUT, has both original content
 
-
-
-
-
-
-
-
-
-
-
- 
+print(text_messages)
+print(sent_messages)
 
 
 
