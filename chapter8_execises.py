@@ -101,7 +101,42 @@ describe_cities('rome')
 describe_cities('dallas')
 
 
+# SECTION - 8-9: Messages
+    # Make a list containing a series of short text messages
+    # Pass list into function show_message() and print message
 
+print("\nThis section of the program is Chapter 8-9 Messages:")
+
+text_messages = ['hello world!', 'i like coding in python :)', 'routines are great exercise']
+
+def show_message(list_messages):
+    for message in list_messages:
+        print(f"{message.title()}")
+
+show_message(text_messages)
+
+
+
+# SECTION - 8-10: Sending Messages 
+    #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

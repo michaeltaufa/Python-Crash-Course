@@ -176,3 +176,27 @@ while True:
     make_album(user_artistName, user_albumName, user_numberOfSongs)
 
 print("The 'Exercise 8-8: User Album' Program is complete!")
+
+
+# SECTION - Passing a List:
+    # Passing a list into a function will be needed depending on the needs
+
+def greet_users(names):
+
+    for name in names:
+        message = f"Hello, {name.title()}"
+        print(message)
+
+userNames = ['hannah', 'ty', 'margot']
+
+     
+
+
+
+
+
+
+
+
+
+
