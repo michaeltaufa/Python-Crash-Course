@@ -162,6 +162,54 @@ print(text_messages)
 print(sent_messages)
 
 
+# SECTION - 8-12 Sandwiches:
+    # Write a function that accepts a list of items person wants in a sandwich
+    # Function should have (1) parameter that accept various number of items
+    # print() summary of all items in sandwich
+
+print("\nThis section of the program is Chapter 8-12 Sandwiches: ")
+
+def build_sandwich(*topping_items):
+    print("\nThe following items has been added to this sandwich: ")
+    for topping in topping_items:
+        print(f"-{topping.title()}")
+
+build_sandwich('tuna', 'wheat bread', 'spinach', 'tomatoes', 'mayonaise')
+build_sandwich('meatballs', 'italian bread', 'marinara sauce')
+build_sandwich('white bread', 'pastrami', 'cheese')
+
+# SECTION - 8-13 User Profile:
+    # Start with copy of 'build_profile()' to build a 'profile'
+    # For function, include first name, last name, and 3 other key-value pairs
+    # to build a dictionary
+
+print("\nThis section of the program is Chapter 8-13 User Profile: ")
+
+def build_profile(firstName, lastName, **userInformation):
+    userInformation['first name'] = firstName
+    userInformation['last name'] = lastName
+
+    return userInformation
+
+michael_profile = build_profile('michael', 'smith', favoriteNFL = 'san francisco 49ers', location = 'colorado', color = 'white')
+print(michael_profile)
+
+print("\nI will be printing the dictionary information below: ")
+for key, value in michael_profile.items():
+    print(f"Here is the key: {key} and the value: {value}.")
+
+
+# SECTION - 8-14 Cars:
+    #
+    # 
+
+print("\nThis section of the program is Chapter 8-14 Cars: ")
+
+
+
+
+
+
 
 
 

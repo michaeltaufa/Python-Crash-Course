@@ -52,8 +52,6 @@ validate_VideoGame_orders(completed_VideoGames_orders)
     # Use the 'slice function' to "send a copy of the list"
         # EXAMPLE: function_name(list_name[:])
 
-
-
 # SECTION -  Passing Arbitary Number of Arguments
     # There will be instances when you won't know 
     # how many arguments will be passed into a function
@@ -70,5 +68,45 @@ def make_pizza(*toppings):
 
 make_pizza('green peppers')
 make_pizza('pepperoni', 'extra cheese', 'mushrooms')
+
+# SECTION - Mixing Positional and Arbitrary Arguments
+    # When adding mixture of arguments and parameters
+    # Arbitary arguments will be last, "Think... collect left overs"
+
+print("\nThis section of the program is 'Mixing Positional and Arbitary Arguments': ")
+
+def creating_pizza(size, *toppings):
+    print(f"The {size} inch pizza with the following toppings: ")
+
+    for topping in toppings:
+        print(f"- {topping.title()}")
+
+creating_pizza(12, 'mushrooms', 'italian sausage')
+creating_pizza(16, 'pepperoni', 'cheese', 'pineapples')
+
+
+# SECTION - Using Arbitrary Keywood Arguments
+    # Using 'Arbitrary Arguments' will help build key-value dictionary values
+    # when there are unexpected arguments passed into the function
+
+print("\nThis section of the program is 'Keyword Arbitary Arguments': ")
+
+def build_profile(first_Name, last_Name, **userInfo):
+    # userInfo = {}    < ---- NOTE: IMPORTANT
+
+    # Adding this will not allow 'Arbitrary Keywood' values to append to object
+
+    userInfo['first name'] = first_Name
+    userInfo['last name'] = last_Name
+    
+    # 'return' statement will allow function to return value and store in variable...
+    # IF assigned to a variable intially before calling function
+    return userInfo
+
+user_profile1 = build_profile('john', 'smith', age = 5, location = 'USA')
+user_profile2 = build_profile('sam', 'sliderz', hobby = 'exercise', color = 'green')
+
+print(user_profile1)
+print(user_profile2)
 
 
