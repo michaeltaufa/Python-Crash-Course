@@ -200,16 +200,23 @@ for key, value in michael_profile.items():
 
 
 # SECTION - 8-14 Cars:
-    #
-    # 
+    # Write a function that stores information about a car 
+    # in a dictionary
+    # Function shoyuld receive the following: manufacturer and model name  
+        # NEXT, it should accept an 'arbitrary number of keywords'
 
+    # Call function to print information
+ 
 print("\nThis section of the program is Chapter 8-14 Cars: ")
 
+def build_car(manufacturerName, modelName, **vehicleInformation):
+    vehicleInformation['manufacturer name'] = manufacturerName
+    vehicleInformation['model name'] = modelName
 
+    return vehicleInformation
 
+vehicle_user1 = build_car('honda', 'civi', color = 'red', price = 10_000)
+vehicle_user2 = build_car('chevrolet', 'silverado', color = 'white', price = 20_0000)
 
-
-
-
-
-
+print(vehicle_user1)
+print(vehicle_user2)

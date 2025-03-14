@@ -108,5 +108,3 @@ user_profile2 = build_profile('sam', 'sliderz', hobby = 'exercise', color = 'gre
 
 print(user_profile1)
 print(user_profile2)
-
-
