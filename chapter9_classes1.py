@@ -114,15 +114,112 @@ footballTeam2.team_lost()
 my_dog.name
 
 
-print("\nThis next section is focused... ") 
+# SECTION - Working with Classes and Instances
+    # When class is created, most times will be spent creating instances 
+    # NOTE: This is an important section to understaing attribute values
+
+        # When creating class, you can modify attributes directly
+
+print("\nThis next section is focused on 'Working with Classes and Instances'.")
+
+class SportsCar:
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer = 0
+
+    def get_destructive_name(self):
+        long_name = f'{self.year} {self.make} {self.model}'
+
+        # NOTE: For return statement, we can add title()
+        return long_name #.title()
+
+    def read_odometer(self):
+        print(f"This vehicle has {self.odometer} miles.")
+
+    # This method will update odometer when passing value in method
+    def update_odometer(self, new_mileage):
+        # Redeclare new value passed method
+
+        if self.odometer < new_mileage:
+            self.odometer = new_mileage
+        elif self.odometer == new_mileage:
+            print("The mileage is {self.odometer} and will not change.")
+        else:
+            print("New mileage: {new_mileage} can't be rolled back.")
+
+        return self.odometer
+
+    # This method will increment the odometer based on miles passed into 
+    # value passed into method
+    def increment_odometer(self, miles):
+        self.odometer += miles
+
+        return self.odometer
 
 
+michael_newCar = SportsCar('tesla', 'model y', 2024)
+
+print(michael_newCar.get_destructive_name())
+    # NOTE: You can add a method to function.
+print(michael_newCar.get_destructive_name().title())
 
 
+# SECTION - Setting a Default Value for an Attribute
+    # You can initialize attributes in __init__ without needing parameter
+    # NOTE: Refer to class 'SportsCar' for update
+ 
+print("\nThis next section is focused on 'Setting a Default Value...'.")
+
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.read_odometer()
 
 
+# SECTION - Modifying attribute values
+    # (3) ways to change attribute values
+        # 1. Change values directly
+        # 2. Set value through a method
+        # 3. Increment the value through a method
 
+print("\nThis next section is focused on 'Modifying attribute values - Change Directly'.")
 
+# 1. - Change values directly:
+    # Access attributes through 'dot notation' and alter value
 
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.odometer = 10
+michael_newCar.read_odometer()
 
+print("\nThis next section is focused on 'Modifying attribute values - Creating '.")
 
+# 2. - Set values through a 'method'
+    # Method 'update_odometer' created to pass new value 
+    # Refer to line 143
+
+michael_newCar.update_odometer(30)
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.read_odometer()
+
+michael_newCar.update_odometer(50)
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.read_odometer()
+
+michael_newCar.update_odometer(40)
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.read_odometer()
+
+# 3. - 'Increment the value' through a Method
+    # Method is created to increment values passed
+    # Refer to line 157
+
+print("\nThis next section is focused on 'Modifying attribute values - Increment...'")
+
+michael_newCar.increment_odometer(100)
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.read_odometer()
+
+michael_newCar.increment_odometer(100)
+print(michael_newCar.get_destructive_name().title())
+michael_newCar.read_odometer()
