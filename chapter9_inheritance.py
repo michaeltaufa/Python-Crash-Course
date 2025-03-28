@@ -38,12 +38,27 @@ class Car:
 
         return self.odometer
 
+
     # We will focus on building a 'Child Class' based on the parent class
+        # When creating a 'Child Class', you will need the following:
+            # 1. Adding new attributes is similar to classes
+                # NOTE: will need to add it to the "__init__"
+
+            # 2. When creating new method, it is similar to clases
+
+class Battery():
+    def __init__(self, battery_size):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print(f"This car has a {self.battery_size} -kwh battery.")
+
 
 class ElectricCar(Car):
 
     def __init__(self, make, model, year):
         super().__init__(make, model, year)
+        self.battery_size = Battery()
 
 
 my_diselTruck = Car('dodge', 'ram', 2009)
@@ -54,3 +69,12 @@ print(my_diselTruck.get_descriptiveName())
 my_spaceX_car = ElectricCar('tesla', 'model y', 2020)
 print("\nThis is the output of the 'Child Class':")
 print(my_spaceX_car.get_descriptiveName())
+
+my_spaceX_car.battery_size.describe_battery()
+
+
+my_evCar = ElectricCar('rivion', 'x', 2025)
+print("\nThis is the output of the 'Child Class':")
+print(my_evCar.get_descriptiveName())
+
+
