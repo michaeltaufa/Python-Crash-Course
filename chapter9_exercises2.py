@@ -149,3 +149,4 @@ my_firstEV.battery.upgrade_battery()
 my_firstEV.battery.display_rangeMiles()
 
 
+print("\nProgram: Chapter 9 Exercises 2 is completed.")
