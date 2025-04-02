@@ -1,0 +1,5 @@
+I am having fun learning Python learning language.
+I have learned the importance of building functions and learned how to import modules.
+I have enjoyed learning how to build classes and understanding the basic concept of inheritance.
+Similar to importing modules, I can import classes.
+Overall, I am enjoying my learning journey of Python.

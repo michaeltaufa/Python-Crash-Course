@@ -1,0 +1,25 @@
+"""
+Program: Writing to a File
+Description:
+    For this program, we will learn to write to a file.
+Name: Michael Taufa
+Date: 2025-03-31
+"""
+
+import pathlib
+
+path = pathlib.Path('user_testing.txt')
+# NOTE: When creating a path, it will create a new file in the same directory
+# and will overwrite the previous file IF it has same file name
+print("\nWelcome to the program where we will create a new file!")
+user_name = input("Enter your name: ")
+
+print(f"Welcome {user_name.title()}! Now, write anything you want to add.")
+user_message = input("Enter here: ")
+
+path.write_text(user_message)
+    # Method() NOTE:
+        # 1. read_text() will read content when you pass arguemtn in method
+        # 2. write_text() will write string in the file
+
+print("Message has been added.\nFile has been created: 'user_testing.txt'\nThis is the end of the program.")

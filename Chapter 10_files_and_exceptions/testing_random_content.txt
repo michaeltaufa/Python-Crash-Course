@@ -1,4 +1,0 @@
-Hello, my name is Michael!
-I am having fun learning Python and I am currently learning to to read contents from a file.
-This will be practice to see how reading text from this file will result to.
-Have a good day!
