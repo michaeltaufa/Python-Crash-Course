@@ -12,14 +12,23 @@ Date: 2025-04-17
 from pathlib import Path
 import json
 
-
 path = Path('FINAL_exercise10.14_verifyUser.json')
 
 if path.exists():
     content = path.read_text()
     content_username = json.loads(content)
 
-    print(f"Welcome back '{content_username}'.\nYou information was extracted successfully from '{path}'!")
+    print(f"Are you '{content_username}'?")
+    user_verification = input(f"Type and enter Yes (y) or No (n): ")
+
+    if user_verification == 'y':
+        print(f"Welcome back '{content_username}'.\nYou information was extracted successfully from '{path}'!")
+
+    else:
+        username = input("Enter your username: ")
+        content = json.dumps(username)
+        path.write_text(content)
+        print(f"'{content}' has been added to '{path}'.")
 
 else:
     print("Welcome to Exercise 10-14 Verify User Program.")
